@@ -74,19 +74,22 @@ class Plot_Truss:
                 color="#212529",
             )
         plt.axis("off")
-        plt.savefig("TrussOutput/damageplot.svg", format = "png", dpi = 600)
+        plt.savefig("TrussOutput/damageplot.png", format = "png", dpi = 300)
         # plt.show()
 
 
 damages = {
     1: 0.3,
-    2: 0.5,
-    3: 0.0,
-    4: 0.8,
-    5: 0.4,
-    6: 0.025,
-    7: 0.7025,
-    8: 0.2525,
-    9: 0.6025,
+    2: 0,
+    3: 0.2,
+    4: 0,
+    5: 0.1,
+    6: 0,
+    7: 0,
+    8: 0.5,
+    9: 0.99,
 }
 
+
+plot = Plot_Truss(damage_list=damages)
+plot.plotTruss()

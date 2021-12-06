@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Result</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="resultstyle.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div class="top">
+        <h3 class="label-result">Damage Prediction Completed!</h3>
+        <a type="button" href="#">Click Me to Download Your Result</a>
+      </div>
+      <div class="bottom">
+          <h1 class="label-truss">
+            Visualise The Truss With Predicted Damages
+          </h1>
+          <form
+            action="#"
+            method="post"
+            onsubmit="return indexValidation()"
+            id="index-form"
+            class="index-form"
+          >
+            <label for="index" class="label-index"
+              >Enter the index number of your csv input</label
+            >
+            <div class="btn-group">
+              <input
+                type="number"
+                name="index"
+                id="index"
+                placeholder="Index"
+              />
+              <button type="submit">Show Result</button>
+            </div>
+            </form>
+            <div class="truss-display">
+              <img src="damageplot.png" alt="truss-pic" class="truss-image" />
+            </div>         
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

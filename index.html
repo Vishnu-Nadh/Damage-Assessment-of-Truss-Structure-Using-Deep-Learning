@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Damage Prediction</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div class="top">
+        <div class="overlay"></div>
+        <header class="heading">
+          Damage Assessment of Truss Structure From Model Parameters
+        </header>
+        <img src="truss.jpg" alt="Truss_image" />
+      </div>
+      <div class="bottom">
+        <form action="#" method="post" id="csv-form" onsubmit="return validation()">
+          <label for="upload-btn"
+            >Upload your csv file with input model parameters</label
+          >
+          <input
+            type="file"
+            name="upload-btn"
+            class="upload-btn"
+            id="upload-btn"
+          />
+          <!-- <div class="error">
+            <h4 class="message">Error Message</h4>
+          </div> -->
+          <button class="submit-btn" type="submit">Submit</button>
+        </form>
+      </div>
+      <footer>
+        <small
+          >Contact me :<a href="mailto: vishnunadh222@gmail.com"
+            >vishnunadh222@gmail.com</a
+          ></small
+        >
+      </footer>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
