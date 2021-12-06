@@ -11,7 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="static/style.css" />
   </head>
   <body>
     <main class="container">
@@ -20,10 +20,16 @@
         <header class="heading">
           Damage Assessment of Truss Structure From Model Parameters
         </header>
-        <img src="truss.jpg" alt="Truss_image" />
+        <img src="{{ image }}" alt="Truss_image" />
       </div>
       <div class="bottom">
-        <form action="#" method="post" id="csv-form" onsubmit="return validation()">
+        <form
+          action="/"
+          method="post"
+          id="csv-form"
+          onsubmit="return validation()"
+          enctype="multipart/form-data"
+        >
           <label for="upload-btn"
             >Upload your csv file with input model parameters</label
           >
@@ -47,6 +53,6 @@
         >
       </footer>
     </main>
-    <script src="script.js"></script>
+    <script src="static/script.js"></script>
   </body>
 </html>

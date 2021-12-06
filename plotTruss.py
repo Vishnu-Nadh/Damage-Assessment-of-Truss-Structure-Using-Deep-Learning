@@ -19,8 +19,8 @@ class Plot_Truss:
         9: [5, 6],
     }
 
-    def __init__(self, damage_list):
-        self.damages = damage_list
+    def __init__(self, damage_dict):
+        self.damages = damage_dict
 
     def plotTruss(self):
         x = [i[0] for i in self.cordinates.values()]
@@ -74,22 +74,7 @@ class Plot_Truss:
                 color="#212529",
             )
         plt.axis("off")
-        plt.savefig("TrussOutput/damageplot.png", format = "png", dpi = 300)
+        plt.savefig("static/images/damageplot.png", format="png", dpi=300)
         # plt.show()
 
 
-damages = {
-    1: 0.3,
-    2: 0,
-    3: 0.2,
-    4: 0,
-    5: 0.1,
-    6: 0,
-    7: 0,
-    8: 0.5,
-    9: 0.99,
-}
-
-
-plot = Plot_Truss(damage_list=damages)
-plot.plotTruss()
