@@ -1,3 +1,4 @@
+from re import X
 from flask import (
     Flask,
     request,
@@ -7,7 +8,11 @@ from flask import (
     url_for,
 )
 import os
+from dataLoader import Load_Data
+from preprocessor import Preprocess
+from trainModel import Train_Model
 from plotTruss import Plot_Truss
+
 
 app = Flask(__name__)
 img_path = os.path.join("static", "images")
@@ -21,8 +26,19 @@ app.config["SEND_RESULT"] = os.path.join(root_dir, "Predicted_Output")
 
 @app.route("/train", methods=["GET", "POST"])
 def train():
-    pass
-    return jsonify("training completed")
+    if request.method == "POST":
+        if request.json['key'] == 'start':
+            load_data = Load_Data()
+            data = load_data.loadData()
+            preoprocess = Preprocess(data)
+            x_train, y_train = preoprocess.preprocessTrain()
+            model_train = Train_Model(x_train, y_train)
+            output = model_train.trainModel()
+            
+            
+    return jsonify(output)
+
+
 
 
 @app.route("/", methods=["GET", "POST"])

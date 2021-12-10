@@ -15,7 +15,7 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  /* gap: 25px; */
 }
 .top {
   width: 100%;
@@ -23,9 +23,15 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
-  padding-bottom: 25px;
+  /* margin-top: 50px; */
+  /* padding-bottom: 25px; */
   border-bottom: 2px solid #4176a0;
+  height: 24vh;
+}
+.bottom {
+  padding-top: 25px;
+  height: 75vh;
+  overflow: scroll;
 }
 .top a {
   text-decoration: none;
@@ -40,12 +46,12 @@ body {
 }
 
 button:hover,
-.top a:hover{
-    background-color: #396488;
+.top a:hover {
+  background-color: #396488;
 }
 button:active,
-.top a:active{
-    background-color: #4176a0;
+.top a:active {
+  background-color: #4176a0;
 }
 
 .index-form {
@@ -80,8 +86,8 @@ input {
   border-radius: 5px;
 }
 
-.btn-group{
-    margin-top: 10px;
+.btn-group {
+  margin-top: 10px;
 }
 
 button {
@@ -101,13 +107,13 @@ input:hover {
   box-shadow: 0 3px 25px 0 #07192933;
 }
 
-.truss-display{
+.truss-display {
   display: flex;
   justify-content: center;
 }
-.truss-image{
+.truss-image {
   width: 80%;
   height: auto;
   margin: 20px;
-  box-shadow: 10px 10px 10px rgba(0,0,0,0.2);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
 }
