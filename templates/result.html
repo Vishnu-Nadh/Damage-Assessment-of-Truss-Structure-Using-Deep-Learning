@@ -34,12 +34,30 @@
             >Enter the index number of your csv input</label
           >
           <div class="btn-group">
-            <input type="number" name="index" id="index" placeholder="Index" />
+            <input
+              type="number"
+              name="index"
+              id="index"
+              placeholder="Index"
+              min="1"
+            />
             <button type="submit">Show Result</button>
           </div>
+          {% with messages = get_flashed_messages(with_categories = false) %} 
+          {%if messages %} 
+          {% for message in messages %}
+          <div class="error">{{ message }}</div>
+          {% endfor %} 
+          {% endif %} 
+          {% endwith%}
         </form>
         <div class="truss-display">
           <img src="{{image}}" alt="truss-pic" class="truss-image" />
+        </div>
+        <div class="predict-next">
+          <a href = "{{url_for('predict')}}" class="predict-next-btn">
+            Predict using another csv file
+          </a>
         </div>
       </div>
     </main>

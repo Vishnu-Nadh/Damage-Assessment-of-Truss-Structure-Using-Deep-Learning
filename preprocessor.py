@@ -18,11 +18,22 @@ class Preprocess:
         pickle.dump(scaler, open('Scaler/minmaxScaler.sav', 'wb'))
         x_array = scaler.transform(x_train)
         return x_array
-        
     
+    def minMaxScalingPred(self, x_pred):
+        scaler = pickle.load(open('Scaler/minmaxScaler.sav', 'rb'))
+        x_pred = scaler.transform(x_pred)
+        return x_pred
+            
     def preprocessTrain(self):
         data = self.data
         x_train, y_train = self.splitFeaturesAndTarget(data)
         x_train = self.minMaxScalingTrain(x_train)
         y_train = y_train.to_numpy()
         return x_train, y_train
+    
+    def preprocessPred(self):
+        x_pred = self.data
+        x_pred_arr = self.minMaxScalingPred(x_pred)
+        return x_pred_arr
+        
+    

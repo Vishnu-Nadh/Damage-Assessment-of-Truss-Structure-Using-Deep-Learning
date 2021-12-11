@@ -33,6 +33,7 @@ body {
   height: 75vh;
   overflow: scroll;
 }
+a,
 .top a {
   text-decoration: none;
   height: 30px;
@@ -46,9 +47,12 @@ body {
 }
 
 button:hover,
+a:hover,
 .top a:hover {
   background-color: #396488;
 }
+
+a:active,
 button:active,
 .top a:active {
   background-color: #4176a0;
@@ -100,6 +104,7 @@ button {
   color: #fff;
   background-color: #4176a0;
   font-weight: 600;
+  cursor: pointer;
 }
 
 input:active,
@@ -116,4 +121,33 @@ input:hover {
   height: auto;
   margin: 20px;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.error {
+  margin-top: 10px;
+  height: 30px;
+  background-color: #fcd1d1;
+  width: 450px;
+  color: #e03131;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #e03131;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #fdaaaa;
+}
+.predict-next {
+  display: flex;
+  justify-content: center;
+}
+
+.predict-next-btn {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
 }
