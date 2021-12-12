@@ -46,7 +46,7 @@ Choose your python environment to install dependencies and install the libaries 
 Start the server
 
 ```bash
-    app.py
+    main.py
 ```
 
 Press Enter and visit the app from local host url shown in the terminal. Use csv data from the folder "testdatas" to test the app

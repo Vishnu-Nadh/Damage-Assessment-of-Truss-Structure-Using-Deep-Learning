@@ -35,5 +35,3 @@ class Preprocess:
         x_pred = self.data
         x_pred_arr = self.minMaxScalingPred(x_pred)
         return x_pred_arr
-        
-    
