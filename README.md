@@ -13,11 +13,11 @@ The location and severity of damage of the components of a Truss structure is pr
 
 ## Tech Stack
 
-**Client:** HTML, CSS, JavaScript
+* **Client:** HTML, CSS, JavaScript
 
-**Server:** Python with libraries tensorflow, scikit-learn, pandas, numpy
+* **Server:** Python with libraries tensorflow, scikit-learn, pandas, numpy
 
-**API Framework:** Python Flask==2.0.2
+* **API Framework:** Python Flask==2.0.2
 
 ## Run App Locally
 
